@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcript Processor</title>
+</head>
+<body>
+  <h1>Transcript Processor</h1>
+  <form method="post">
+    <textarea name="transcript" rows="10" cols="50" placeholder="Enter your transcript here..."></textarea><br>
+    <button type="submit">Process Transcript</button>
+  </form>
+
+  {% if original %}
+    <h2>Original Transcript:</h2>
+    <pre>{{ original }}</pre>
+  {% endif %}
+
+  {% if processed %}
+    <h2>Processed Transcript:</h2>
+    <pre>{{ processed }}</pre>
+  {% endif %}
+</body>
+</html>
